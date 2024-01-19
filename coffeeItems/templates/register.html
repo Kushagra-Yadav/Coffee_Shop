@@ -1,0 +1,32 @@
+
+{%extends "base.html"%}
+{%block start%}
+    <div class="d-flex align-items-center py-4 bg-body-tertiary">
+      <main class="form-signin m-auto" style="width: 30%;">
+        <form method="post">
+          {%csrf_token%}
+          <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
+          <div class="form-floating mb-3">
+            <input type="text" name="first_name" class="form-control" id="floatingInput" placeholder="Firstname">
+            <label for="floatingInput">Firstname</label>
+          </div>
+          <div class="form-floating mb-3">
+            <input type="text" name="last_name" class="form-control" id="floatingInput" placeholder="Lastname">
+            <label for="floatingInput">Lastname</label>
+          </div>
+          <div class="form-floating mb-3 ">
+            <input type="text" name="username" class="form-control" id="floatingInput" placeholder="Username">
+            <label for="floatingInput">Username</label>
+          </div>
+          <div class="form-floating mb-3">
+            <input type="password" name="password" class="form-control" id="floatingPassword" placeholder="Password">
+            <label for="floatingPassword">Password</label>
+          </div>
+          <p>Already have an account <a href="/login/">Login</a></p>
+          <button class="btn btn-primary w-100 py-2" type="submit">Sign in</button>
+        </form>
+      </main>
+    </div>
+   
+{%endblock%}
+
