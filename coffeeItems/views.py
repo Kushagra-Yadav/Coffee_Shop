@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-from .models import Coffee,Premium
+from .models import Coffee,Premium,Question
 
 # Create your views here.
 def Home(request):
@@ -18,3 +18,10 @@ def SignIn(request):
 
 def LogIn(request):
   return render(request,'login.html')
+
+def FrequentlyAskedQuestion(request):
+  questions=Question.objects.all()
+  return render(request,'FAQs.html',{'questions':questions})
+
+def AboutUs(request):
+  return render(request,'AboutUs.html')

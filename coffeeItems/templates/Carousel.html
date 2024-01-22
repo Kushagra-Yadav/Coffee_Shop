@@ -1,6 +1,6 @@
 {%extends 'base.html'%}
 {%block start%}
-<div class="container"style="margin-top:1rem;width:70%;">
+<div class="container" style="width: 80%; margin-top:2;">
   <div id="carouselExampleIndicators" class="carousel slide">
     <div class="carousel-indicators">
       <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -27,18 +27,5 @@
       <span class="visually-hidden">Next</span>
     </button>
   </div>
-</div>
-<div style="display: flex;flex-direction: row;margin:0.3rem;padding:1.5rem; flex-wrap: wrap;">
-  {%for coffee in coffee%}
-<div class="card" style="max-width:18rem;margin:2rem;padding:1rem; background-color:#e6ccff">
-  <img src={{coffee.image}} class="card-img-top" alt="..." style="height: 50%; object-fit: cover;">
-  <div class="card-body">
-    <h5 class="card-title"><i>{{coffee.name}}</i></h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <h4>${{coffee.price}}</h4>
-    <button class="btn btn-secondary rounded-pill px-3" type="button">Add to Cart</button>
-  </div>
-</div>
-{%endfor%}
 </div>
 {%endblock%}
